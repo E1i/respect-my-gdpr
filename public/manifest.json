@@ -1,0 +1,35 @@
+{
+	"name": "Respect My GDPR",
+	"short_name": "MyGDPR",
+	"version": "0.0.0.1",
+	"manifest_version": 2,
+	"description": "Description",
+	"icons": {
+		"16": "16x16.png",
+		"48": "48x48.png",
+		"90": "90x90.png",
+		"128": "128x128.png"
+	},
+	"browser_action": {
+		"default_icon": "128x128.png",
+		"default_title": "Жмякни!"
+	},
+	"options_page": "options.html",
+	"options_ui": {
+		"page": "options.html",
+		"open_in_tab": true
+	},
+	"permissions": [
+		"tabs",
+		"webRequest",
+		"storage",
+		"webRequestBlocking",
+		"<all_urls>"
+	],
+	"content_security_policy": "script-src 'self'; object-src 'self'",
+	"web_accessible_resources": ["css/*.css", "img/*.svg", "img/*.png"],
+	"background": {
+		"persistent": true,
+		"page": "bg.html"
+	}
+}
